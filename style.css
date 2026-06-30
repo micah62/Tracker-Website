@@ -1,0 +1,87 @@
+.completed {
+  background-color: green;
+}
+
+#day-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+#sets-container > div {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #555;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #3a3a3a;
+}
+
+#sets-container > div.completed {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+body {
+  font-family: sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding-top: env(safe-area-inset-top, 20px);
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+  padding-left: env(safe-area-inset-left, 20px);
+  padding-right: env(safe-area-inset-right, 20px);
+}
+
+#day-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#status-message.current-day-status {
+  color: #4CAF50;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  font-size: 20px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+#status-message {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+#complete-day {
+  margin-top: 20px;
+}
+
+{
+  -webkit-tap-highlight-color: transparent;
+}
