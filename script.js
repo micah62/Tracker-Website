@@ -57,6 +57,7 @@ function loadLog() {
 
 function saveLog(log) {
     localStorage.setItem('pulluplog', JSON.stringify(log) )
+    localStorage.setItem('activeIndex', activeIndex);
 }
 
 let LOG = loadLog();
@@ -111,8 +112,8 @@ function renderDay(dayNumber) {
 }
 
 
-let activeIndex = 1;
-let viewingIndex = 1;
+let activeIndex = parseInt(localStorage.getItem('activeIndex')) || 1;
+let viewingIndex = activeIndex;
 
 document.getElementById('prev-day').addEventListener('click', function() {
     if (viewingIndex > 1) {viewingIndex--; renderDay(viewingIndex);}
@@ -140,10 +141,6 @@ document.getElementById('complete-day').addEventListener('click', function() {
     saveLog(LOG);
     renderDay(viewingIndex);
 });
-
-
-
-
 
 
 
